@@ -3,24 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destaraje General - Mehicaso Group</title>
+    <title>Sistema de Destaraje - EVERPLASTIC</title>
+    <script>
+        // Redirigir automáticamente al sistema de destaraje
+        window.location.replace("destaraje_general_final.html");
+    </script>
     <style>
         body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-            overflow: hidden;
+            background: linear-gradient(135deg, #001D3D 0%, #003566 100%);
+            color: white;
         }
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+        .loader {
+            text-align: center;
+        }
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid #FFC300;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        p {
+            font-size: 18px;
+        }
+        a {
+            color: #FFC300;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
-    <iframe src="destaraje_general_final.html" allow="microphone"></iframe>
+    <div class="loader">
+        <div class="spinner"></div>
+        <p>Cargando Sistema de Destaraje...</p>
+        <p><small>Si no redirige automáticamente, <a href="destaraje_general_final.html">haz click aquí</a></small></p>
+    </div>
 </body>
 </html>
